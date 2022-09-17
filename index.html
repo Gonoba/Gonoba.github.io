@@ -7,6 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ceci est un test</h1>
+  <section class="titre">
+        <h1 id="header">Password required</h1>
+    </section>
+    <section class="psw">
+        <div class="test"><input class="mdp" id="mdp" style="text-transform: uppercase" type="text" required minlength="1" maxlength="6" size="6"></div>
+    </section>
+    <section class="clue">
+        <div class="cercle-orange"></div>
+        <div class="cercle-noir"></div>
+        <div class="cercle-rose"></div>
+        <div class="cercle-vert"></div>
+        <div class="cercle-blanc"></div>
+        <div class="cercle-violet"></div>
+    </section>
+    <section class="message" id="message">Access Denied</section>
+    <section class="submit">
+        <!-- <form> -->
+            <button onclick="pressed()">Submit</button>
+                <script>
+                    function pressed(){
+                        var text = document.getElementById("mdp").value;
+                        if(text==="289045"){
+                            window.open("http://127.0.0.1:5500/Solution.html")
+                        }else{
+                            document.getElementById("message").style.color="red"
+                            setTimeout(function(){location.reload(true)},2000);
+                        }
+                        }
+                </script>
+                <a href=""></a>
+            <!-- <button type="reset" value="reset">Reset</button> -->
+        <!-- </form> -->
+    </section>
 </body>
 </html>
